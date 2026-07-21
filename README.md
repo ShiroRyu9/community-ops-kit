@@ -6,6 +6,29 @@ Community Ops Kit is an open set of Agent Skills for running evidence-based comm
 
 It works with Codex and other tools that support the open Agent Skills format.
 
+## Start Without Choosing A Skill
+
+Give your existing notes to the router. You do not need to clean the input or remember all ten skill names:
+
+```text
+Use community-ops-router to read the community records below. Separate confirmed facts, assumptions, data gaps, and approval items. Find the main operating friction, call the specialist skills that are needed, and give me the smallest action we can run this week with a review rule.
+
+[Paste chat summaries, activity records, member feedback, metrics, or work notes]
+```
+
+See the complete path from messy notes to operating decisions in the [end-to-end example](examples/end-to-end-operating-loop.md).
+
+## How The Kit Makes Decisions
+
+1. **Start with evidence**: separate facts, assumptions, data gaps, and approval items.
+2. **Find the main friction**: locate the lifecycle step blocking the next user action.
+3. **Choose the smallest useful change**: prefer an action that can run and produce evidence this week.
+4. **Give each surface one clear job**: entry points guide, activity surfaces collect participation, and reports support decisions.
+5. **Automate within a boundary**: collection, organization, reminder preparation, and checks may run automatically; sending reminders and other external actions stay human-confirmed.
+6. **Make every action reviewable**: define the evidence, review time, owner, and next decision before execution.
+
+See [Operating Principles](skills/community-ops-router/references/operating-principles.md) for the full decision questions, anti-patterns, and output check.
+
 ## What It Covers
 
 | Skill | Use it for |
@@ -80,7 +103,7 @@ Use community-ops-activity to design a seven-day creator challenge with a clear 
 Use community-ops-weekly-review to turn these notes and metrics into confirmed actions, signals, risks, decisions, and next-week priorities.
 ```
 
-See [examples](examples/) for worked scenarios.
+See [examples](examples/) for worked scenarios. The [end-to-end operating loop](examples/end-to-end-operating-loop.md) shows how the router coordinates several skills during one operating cycle.
 
 ## Safety Model
 

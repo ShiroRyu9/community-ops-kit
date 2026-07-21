@@ -22,6 +22,8 @@ community goal
 
 Start with the user path and operating evidence. Do not begin with channel decoration, generic engagement tactics, or a long list of content ideas.
 
+Read [operating-principles.md](references/operating-principles.md) when the request contains messy records, competing priorities, several possible interventions, or a need to explain why an action was chosen. Apply its evidence, minimum-change, surface-role, automation-boundary, and review rules before routing specialist work.
+
 ## First Move
 
 Classify the request:
@@ -59,6 +61,13 @@ Identify:
 - available surfaces and tools;
 - confirmed evidence and data gaps;
 - public, financial, permission, safety, or privacy boundaries.
+
+Separate the input into four buckets before drawing conclusions:
+
+- confirmed facts;
+- working assumptions;
+- data gaps;
+- actions waiting for approval.
 
 Use [community-patterns.md](references/community-patterns.md) for transferable defaults when project evidence is limited.
 

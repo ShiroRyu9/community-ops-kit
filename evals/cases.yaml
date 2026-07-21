@@ -61,3 +61,27 @@ cases:
       - requests or records evidence
       - keeps permission changes owner-confirmed
       - avoids invented policy or compensation
+
+  - id: route-messy-weekly-notes
+    expected_skill: community-ops-router
+    prompt: >-
+      Read these mixed weekly notes about newcomer questions, activity entries,
+      creator work, reminder drafts, and missing return data. Separate facts,
+      assumptions, data gaps, and approval items before choosing the smallest
+      useful operating change.
+    assertions:
+      - identifies one main lifecycle friction
+      - separates evidence states before recommending action
+      - routes only the specialist work that is needed
+      - defines a review rule and next decision
+
+  - id: beginner-single-entry
+    expected_skill: community-ops-router
+    prompt: >-
+      I am new to AI tools. Here are my community notes. Decide which community
+      operations skills to use and give me one action I can run this week.
+    assertions:
+      - does not require the user to choose a specialist skill first
+      - turns the notes into an explicit task contract
+      - proposes a small reviewable action
+      - marks sensitive external actions for confirmation
