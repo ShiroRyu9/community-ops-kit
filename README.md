@@ -62,13 +62,13 @@ community signal
 ### Cross-Agent Installer
 
 ```bash
-npx skills add lyh974976711-del/community-ops-kit
+npx skills add ShiroRyu9/community-ops-kit
 ```
 
 List the available skills before installing:
 
 ```bash
-npx skills add lyh974976711-del/community-ops-kit --list
+npx skills add ShiroRyu9/community-ops-kit --list
 ```
 
 ### Codex Plugin
@@ -76,7 +76,7 @@ npx skills add lyh974976711-del/community-ops-kit --list
 Add this repository as a plugin marketplace:
 
 ```bash
-codex plugin marketplace add lyh974976711-del/community-ops-kit
+codex plugin marketplace add ShiroRyu9/community-ops-kit
 ```
 
 Then open Codex, run `/plugins`, select **Community Ops Kit**, install it, and start a new session.

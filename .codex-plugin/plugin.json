@@ -5,8 +5,8 @@
   "author": {
     "name": "Community Ops Kit Contributors"
   },
-  "homepage": "https://github.com/lyh974976711-del/community-ops-kit",
-  "repository": "https://github.com/lyh974976711-del/community-ops-kit",
+  "homepage": "https://github.com/ShiroRyu9/community-ops-kit",
+  "repository": "https://github.com/ShiroRyu9/community-ops-kit",
   "license": "Apache-2.0",
   "keywords": [
     "community-operations",
@@ -25,7 +25,7 @@
     "developerName": "Community Ops Kit Contributors",
     "category": "Productivity",
     "capabilities": ["Read", "Write"],
-    "websiteURL": "https://github.com/lyh974976711-del/community-ops-kit",
+    "websiteURL": "https://github.com/ShiroRyu9/community-ops-kit",
     "defaultPrompt": [
       "Diagnose the main friction in my community lifecycle and give me the next operating actions.",
       "Turn these community notes into a weekly review with evidence, risks, and priorities.",
