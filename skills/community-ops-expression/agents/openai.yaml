@@ -1,0 +1,4 @@
+interface:
+  display_name: "Community Ops Expression"
+  short_description: "Write community ops language naturally"
+  default_prompt: "Use $community-ops-expression to rewrite this community-ops output in a natural, concrete operator voice."

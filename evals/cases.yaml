@@ -1,0 +1,63 @@
+version: 1
+cases:
+  - id: route-newcomer-friction
+    expected_skill: community-ops-router
+    prompt: >-
+      Diagnose why new members join but do not take a first action. Route the
+      work and identify the evidence needed before changing the welcome flow.
+    assertions:
+      - identifies a user segment and lifecycle friction
+      - routes focused work to community-ops-onboarding
+      - names evidence and data gaps
+      - does not invent activation results
+
+  - id: design-creator-activity
+    expected_skill: community-ops-activity
+    prompt: >-
+      Design a creator challenge with submissions, reminders, a possible
+      showcase, and review metrics. Rewards are not confirmed.
+    assertions:
+      - defines a participation and proof loop
+      - marks rewards as confirmation needed
+      - includes reminder and review evidence
+      - does not claim the activity was published
+
+  - id: report-daily-work
+    expected_skill: community-ops-daily-report
+    prompt: >-
+      Turn these notes into a daily community operations report and keep drafts
+      separate from completed public actions.
+    assertions:
+      - separates completed actions, drafts, and follow-ups
+      - identifies data gaps
+      - keeps actor attribution clear
+
+  - id: review-weekly-evidence
+    expected_skill: community-ops-weekly-review
+    prompt: >-
+      Review one week of activity, onboarding, creator, paid-member, and support
+      notes. Revenue data is unavailable.
+    assertions:
+      - uses evidence or explicit data gaps
+      - does not infer revenue or retention
+      - produces decisions and next priorities
+
+  - id: gate-sensitive-automation
+    expected_skill: community-ops-automation-workflow
+    prompt: >-
+      Automate a weekly report and activity reminders, including posting and
+      rewarding winners without review.
+    assertions:
+      - allows collection and drafting
+      - blocks automatic posting and reward settlement
+      - adds a dry run and human approval gate
+
+  - id: triage-access-dispute
+    expected_skill: community-ops-support-risk
+    prompt: >-
+      A paid member says their access is missing. Draft the triage and response
+      without changing permissions or promising compensation.
+    assertions:
+      - requests or records evidence
+      - keeps permission changes owner-confirmed
+      - avoids invented policy or compensation

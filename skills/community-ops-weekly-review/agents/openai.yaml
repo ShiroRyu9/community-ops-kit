@@ -1,0 +1,4 @@
+interface:
+  display_name: "Community Ops Weekly Review"
+  short_description: "Review weekly community outcomes"
+  default_prompt: "Use $community-ops-weekly-review to turn weekly community data and actions into decisions, gaps, and next actions."

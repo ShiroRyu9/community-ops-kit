@@ -1,0 +1,21 @@
+{
+  "name": "community-ops-kit",
+  "interface": {
+    "displayName": "Community Ops Kit"
+  },
+  "plugins": [
+    {
+      "name": "community-ops-kit",
+      "description": "Evidence-based workflows for running and reviewing online communities.",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

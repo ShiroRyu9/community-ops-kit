@@ -1,0 +1,35 @@
+{
+  "name": "community-ops-kit",
+  "version": "0.1.0",
+  "description": "Evidence-based community operations workflows for onboarding, activities, creators, paid members, reporting, automation, risk, and operator writing.",
+  "author": {
+    "name": "Community Ops Kit Contributors"
+  },
+  "homepage": "https://github.com/lyh974976711-del/community-ops-kit",
+  "repository": "https://github.com/lyh974976711-del/community-ops-kit",
+  "license": "Apache-2.0",
+  "keywords": [
+    "community-operations",
+    "community-management",
+    "onboarding",
+    "activities",
+    "creators",
+    "reporting",
+    "automation"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Community Ops Kit",
+    "shortDescription": "Reusable workflows for evidence-based community operations",
+    "longDescription": "Plan and review community operations across onboarding, activities, creators, paid members, daily and weekly reporting, automation, support risk, and operator communication.",
+    "developerName": "Community Ops Kit Contributors",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/lyh974976711-del/community-ops-kit",
+    "defaultPrompt": [
+      "Diagnose the main friction in my community lifecycle and give me the next operating actions.",
+      "Turn these community notes into a weekly review with evidence, risks, and priorities.",
+      "Design a community activity with a clear participation loop and review metrics."
+    ]
+  }
+}
