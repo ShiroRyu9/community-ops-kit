@@ -1,4 +1,4 @@
 interface:
   display_name: "Community Ops Daily Report"
   short_description: "Turn daily ops into reports"
-  default_prompt: "Use $community-ops-daily-report to turn daily community operations into a concise action-based report."
+  default_prompt: "Use $community-ops-daily-report to turn the dated source records I provide into a concise report, preserving missing evidence and execution states."

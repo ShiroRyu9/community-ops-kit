@@ -7,6 +7,12 @@ description: Use when producing community weekly reviews, weekly reports, metric
 
 Use this skill to turn a week of community work into decisions and next actions.
 
+## Project Inputs
+
+Get the review period and timezone, durable source records, action states, metric sources and denominators, user or creator signals, known risks, data gaps, and owner decisions from the user or approved project sources.
+
+The skill supplies the review lens and output structure. It does not include the community's weekly actions, counts, revenue, retention, member records, or conclusions. If records are incomplete, review the available evidence and name the missing sources; never fill gaps with repository examples or assumed trends.
+
 ## Review Lens
 
 Review the week by operating loop, not by raw message volume:

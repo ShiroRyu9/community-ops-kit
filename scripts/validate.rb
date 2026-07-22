@@ -18,6 +18,8 @@ required = %w[
   .agents/plugins/marketplace.json
   agents/openai.yaml
   evals/cases.yaml
+  examples/project-context-template.md
+  examples/project-context-template.zh-CN.md
   examples/sop-agent-handoff.md
   skills/community-ops-router/references/sop-contract.md
   skills/community-ops-automation-workflow/references/platform-agent-patterns.md
@@ -83,6 +85,7 @@ skill_files.each do |file_name|
 
   errors << "SKILL.md exceeds 500 lines: #{file.relative_path_from(ROOT)}" if text.lines.length > 500
   errors << "Unbalanced code fences: #{file.relative_path_from(ROOT)}" if text.scan(/^```/).length.odd?
+  errors << "Missing Project Inputs section: #{file.relative_path_from(ROOT)}" unless text.include?("## Project Inputs")
 
   ui_file = file.parent + "agents/openai.yaml"
   unless ui_file.file?

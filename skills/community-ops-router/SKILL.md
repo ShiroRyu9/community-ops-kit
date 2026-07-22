@@ -7,6 +7,12 @@ description: Use when diagnosing, designing, coordinating, operationalizing, or 
 
 Use this skill as the entry point for cross-functional community operations work.
 
+## Project Inputs
+
+The kit supplies reusable judgment patterns, workflows, output structures, and safety boundaries. It does not supply a community's names, platform setup, channels, roles, activity rules, rewards, member benefits, policies, user records, credentials, or bot configuration.
+
+Collect only the project inputs needed for the current task. Treat repository examples as demonstrations, never as defaults. If a necessary value is missing, continue with confirmed facts where useful and label the value `data gap`, `[owner to confirm]`, or a question. Ask only when the missing value blocks a safe or valid result. Never request or preserve passwords, tokens, webhook URLs, full private messages, payment details, or unnecessary personal data.
+
 ## Operating Model
 
 ```text
@@ -65,6 +71,8 @@ Identify:
 - confirmed evidence and data gaps;
 - public, financial, permission, safety, or privacy boundaries.
 
+Do not require the user to complete every possible project field before starting. Gather the smallest relevant input set, then expand it only when the routed task needs more detail.
+
 Separate the input into four buckets before drawing conclusions:
 
 - confirmed facts;
@@ -72,7 +80,7 @@ Separate the input into four buckets before drawing conclusions:
 - data gaps;
 - actions waiting for approval.
 
-Use [community-patterns.md](references/community-patterns.md) for transferable defaults when project evidence is limited.
+Use [community-patterns.md](references/community-patterns.md) for transferable hypotheses when project evidence is limited. These patterns may suggest questions or options; they must not fill project-specific fields.
 
 ### 2. Find The Main Friction
 

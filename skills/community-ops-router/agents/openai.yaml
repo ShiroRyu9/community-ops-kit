@@ -1,4 +1,4 @@
 interface:
   display_name: "Community Ops Router"
   short_description: "Route community work into executable SOPs"
-  default_prompt: "Use $community-ops-router to diagnose this community problem and route it into an evidence-based SOP with ownership, approval, verification, and review."
+  default_prompt: "Use $community-ops-router to diagnose my community records and route the work into an evidence-based SOP, keeping missing project details as data gaps instead of using example defaults."

@@ -15,6 +15,12 @@ The default process is:
 audience -> facts -> action needed -> boundary -> concise wording -> self-check
 ```
 
+## Project Inputs
+
+Get the source facts, audience, publishing surface, desired reader action, language or voice constraints, and confirmation status of timing, rewards, benefits, metrics, permissions, or official claims from the user or an approved project source.
+
+The skill supplies writing judgment and output patterns. It does not supply project facts, brand voice, activity rules, numbers, approvals, or publication status. Low-risk tone details may be inferred from the request; material facts and sensitive claims may not. Do not reuse example values or present placeholders as finished copy.
+
 ## First Questions To Resolve Silently
 
 Before writing, infer:

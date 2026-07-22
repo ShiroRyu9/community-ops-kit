@@ -1,4 +1,4 @@
 interface:
   display_name: "Community Ops Activity"
   short_description: "Design reusable community activities"
-  default_prompt: "Use $community-ops-activity to design a community activity with rules, submission flow, rewards, reminders, and review."
+  default_prompt: "Use $community-ops-activity to design an activity from the project details I provide, and mark missing rules, timing, rewards, or surfaces for confirmation instead of using example values."

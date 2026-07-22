@@ -7,6 +7,12 @@ description: Use when designing or reviewing paid-member, premium, VIP, membersh
 
 Use this skill for paid members, premium users, customers, VIPs, high-value members, or users with special access/benefits.
 
+## Project Inputs
+
+Get the segment definition, confirmed benefits, entitlement or access basis, current issue or opportunity, available evidence, support path, and approval boundary for contact, discounts, benefits, roles, or access from the user or an approved project source.
+
+The skill supplies the operating method. It does not include customer lists, payment status, benefits, discounts, role mappings, renewal data, or outreach permission. Do not infer those values from labels such as `VIP` or from repository examples. Use the minimum necessary user reference and mark missing entitlement or benefit facts for owner confirmation.
+
 ## Paid Member Loop
 
 ```text

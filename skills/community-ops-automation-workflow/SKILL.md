@@ -19,6 +19,12 @@ Automation should reduce repeated labor and improve review quality. Keep public,
 
 Read [platform-agent-patterns.md](references/platform-agent-patterns.md) when the workflow spans an operator, AI skill, scheduler, bot, API, or platform integration.
 
+## Project Inputs
+
+Get the exact repeated action, input source, durable source of truth, tools or platform adapters, existing permission scope, trigger or frequency, approval owner, expected output, completion evidence, retry limit, and stop conditions from the user or approved project documentation.
+
+The skill supplies the handoff and verification method. It does not include a configured bot, scheduler, API, channels, permissions, credentials, or standing approval. Never borrow integrations or targets from examples. Do not request or store tokens, webhook URLs, passwords, or unnecessary private data; refer to existing secure configuration by name or controlled path.
+
 ## Workflow
 
 ### 1. Name The Repeated Task

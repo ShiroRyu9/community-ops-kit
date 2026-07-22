@@ -1,4 +1,4 @@
 interface:
   display_name: "Community Ops Support Risk"
   short_description: "Triage support and trust risks"
-  default_prompt: "Use $community-ops-support-risk to triage community support, payment, safety, permission, or moderation risk."
+  default_prompt: "Use $community-ops-support-risk to triage the evidence and applicable policy I provide, preserving missing facts and keeping sensitive actions owner-confirmed."

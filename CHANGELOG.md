@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1 - 2026-07-22
+
+- Clarified that the kit includes reusable methods and safety boundaries, while community rules, channels, roles, rewards, benefits, records, and tool configuration must come from the user or an approved project source.
+- Added project-input contracts to all ten skills and updated their default prompts to preserve missing values as data gaps instead of borrowing example configuration.
+- Added English and Chinese project context templates, focused/full-workflow guidance, token-loading caveats, beginner FAQ, and clean-context eval cases for missing project configuration.
+
 ## 0.3.0 - 2026-07-22
 
 - Added a reusable community operations SOP contract for triggers, ownership, evidence, execution roles, approval scope, verification, exceptions, and review.

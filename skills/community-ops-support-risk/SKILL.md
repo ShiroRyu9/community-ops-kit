@@ -7,6 +7,12 @@ description: Use when triaging community support issues, payment or access probl
 
 Use this skill when a community issue touches support, safety, payments, permissions, public claims, moderation, privacy, rewards, discounts, roles, DMs, webhooks, bots, or official account actions.
 
+## Project Inputs
+
+Get the issue type, severity, confirmed facts, timestamps, minimum necessary user or record reference, evidence paths or IDs, applicable policy, desired resolution, and public/private boundary from the user or an approved source.
+
+The skill supplies triage and escalation structure. It does not include a community's policy, compensation rules, account state, payment facts, moderation history, or permission data. Missing evidence remains missing. Do not import outcomes from examples, and do not request secrets, full private-message histories, payment details, or unrelated personal data.
+
 ## Triage First
 
 Classify the issue:

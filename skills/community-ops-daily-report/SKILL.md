@@ -7,6 +7,12 @@ description: Use when turning daily community operations into a concise daily re
 
 Use this skill to turn one day's community work into a report. The report should sound like an operator's work record, not an agent retrospective.
 
+## Project Inputs
+
+Get the reporting date and timezone, source records, action owners, execution states, evidence links or IDs, available metrics, data gaps, and decisions needed from the user or an approved operating record.
+
+The skill supplies the report structure and status checks. It does not contain the user's daily work, community metrics, member follow-ups, or completion evidence. If no factual source is provided, return a blank structure or request the minimum records needed; do not produce a factual-looking report from examples.
+
 ## First Move
 
 Separate work into states:

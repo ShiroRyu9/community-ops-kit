@@ -8,6 +8,30 @@ It works with Codex and other tools that support the open Agent Skills format.
 
 Built for community operators, community managers, creator or customer communities, and teams adding AI without giving it unchecked permissions.
 
+## What The Skills Include
+
+The kit includes reusable community-operations judgment, workflows, output structures, and safety boundaries. It does not include the author's community rules, channels, roles, rewards, member benefits, user data, or bot configuration.
+
+Provide only the project details relevant to the current task. For an activity, that may include the target segment, participation action, timing, submission method, and reward status. For a weekly review, provide the week's records, data sources, and metric definitions. Unknown fields may stay blank; the skills should mark them as data gaps or owner decisions instead of borrowing values from repository examples.
+
+Use the [community project context template](examples/project-context-template.md) as a fill-in checklist. Never add passwords, tokens, webhook URLs, full private messages, or unnecessary personal data.
+
+## Two Ways To Use The Kit
+
+### Focused mode
+
+Call one specialist when the task is clear. Use `community-ops-activity` for an activity or `community-ops-daily-report` for a daily report. The full workflow is not required first.
+
+```text
+Use community-ops-activity to design an activity from the project details below. List missing items for confirmation and do not use example values.
+
+[Paste only the details relevant to this activity]
+```
+
+### Full-workflow mode
+
+Give the records to `community-ops-router` when the problem spans several areas or the right specialist is unclear. The router should call only the skills needed for the task.
+
 ## What You Get In One Run
 
 ```text
@@ -116,7 +140,17 @@ Use community-ops-router to diagnose why new members join but do not take a firs
 Call a specialist skill for a focused task:
 
 ```text
-Use community-ops-activity to design a seven-day creator challenge with a clear submission format, reminder rhythm, showcase plan, and review metrics.
+Use community-ops-activity to design an activity from the details below. Keep blank fields as confirmation items:
+Goal: collect product examples for a possible showcase
+Audience: active creators
+User action: create and submit one example
+Start / deadline / timezone:
+Entry / submission surface:
+Valid submission format:
+Review or feedback method:
+Reward or showcase status: pending
+Reminder timing and surfaces:
+Safety or content constraints:
 ```
 
 ```text
@@ -130,6 +164,28 @@ Use community-ops-automation-workflow to turn this reminder process into an owne
 ```
 
 See [examples](examples/) for worked scenarios. The [end-to-end operating loop](examples/end-to-end-operating-loop.md) shows how the router coordinates several skills. The [SOP and agent handoff](examples/sop-agent-handoff.md) shows how a recurring action moves from evidence to verified completion.
+
+## FAQ
+
+### Must I import all community rules first?
+
+No. Provide only the context needed for the current task. A publication-ready activity normally needs timing, eligibility, submission, reward, and safety rules. An early activity brainstorm can leave those fields open and receive a list of decisions to confirm.
+
+### Does every run load all ten skills?
+
+Tools that implement progressive Agent Skills loading typically match on skill metadata first, load the selected skill body after it triggers, and read detailed references only when needed. A focused task can call one specialist; complex work may use the router and several specialists. Other AI tools may load skills differently, so actual token use depends on the tool.
+
+### Can I use only one skill?
+
+Yes. After installing the kit, call a specialist by name, or manually copy only the skill folder you need. The router is an entry point for cross-functional work, not a required step for every task.
+
+### Will example activity rules become my defaults?
+
+No. Examples demonstrate input and output shapes only. The operator must provide or confirm community names, platforms, channels, roles, timing, rewards, benefits, policies, and execution tools.
+
+### Will a skill publish, message members, or issue rewards automatically?
+
+Not by default. The kit can organize evidence, prepare drafts, and create checklists. Public posts, DMs, mentions, rewards, discounts, benefit promises, winner lists, permission changes, and bot or webhook changes require explicit human confirmation.
 
 ## Safety Model
 

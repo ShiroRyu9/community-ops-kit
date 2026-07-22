@@ -1,6 +1,6 @@
 # Community Patterns
 
-Use these as transferable defaults when current project evidence is limited.
+Use these as transferable hypotheses when current project evidence is limited. They can suggest questions or options, but they do not supply project rules, configuration, or facts.
 
 ## Community Types
 

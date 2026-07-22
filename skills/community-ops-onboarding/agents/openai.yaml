@@ -1,4 +1,4 @@
 interface:
   display_name: "Community Ops Onboarding"
   short_description: "Build newcomer activation paths"
-  default_prompt: "Use $community-ops-onboarding to design a newcomer path from entry to first meaningful action."
+  default_prompt: "Use $community-ops-onboarding to design a newcomer path from the current surfaces, access rules, and first-action goal I provide, and flag unknown project details."

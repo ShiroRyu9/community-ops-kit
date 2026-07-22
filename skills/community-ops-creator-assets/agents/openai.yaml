@@ -1,4 +1,4 @@
 interface:
   display_name: "Community Ops Creator Assets"
   short_description: "Operate creators and content assets"
-  default_prompt: "Use $community-ops-creator-assets to turn community creators and submissions into showcases, assets, and follow-up plans."
+  default_prompt: "Use $community-ops-creator-assets to review the creator sources, attribution, and permissions I provide, then prepare showcases, assets, and follow-up plans."

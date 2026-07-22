@@ -7,6 +7,22 @@ description: Use when designing, reviewing, or packaging community activities, c
 
 Use this skill for community activities and campaigns. The job is to turn an idea into a repeatable participation loop, not just an announcement.
 
+## Project Inputs
+
+The skill provides the activity-design method, not a ready-made community's rules. For an operator-ready activity, get these values from the user or an approved project source:
+
+- goal, target segment, and eligibility;
+- one participation action or theme;
+- start, deadline, and timezone;
+- entry surface, submission surface, and valid proof format;
+- feedback, review, or voting method;
+- reward or showcase status: confirmed, pending, or none;
+- reminder timing and delivery surfaces;
+- relevant content, safety, age, regional, or product constraints;
+- owner and approval boundary.
+
+The user may provide only part of this list during ideation. Keep missing values as `[owner to confirm]` and explain which ones block launch. Do not copy dates, rewards, channels, eligibility, rules, or tools from repository examples or another community. Do not ask for credentials or raw private messages.
+
 ## First Move
 
 Classify the activity:

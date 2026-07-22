@@ -7,6 +7,12 @@ description: Use when identifying, nurturing, or operating community creators, c
 
 Use this skill when community members create value: works, answers, tutorials, demos, reviews, bug reports, templates, workflows, examples, or social proof.
 
+## Project Inputs
+
+Get the contribution source, creator attribution, permission status and allowed uses, intended audience and surface, selection criteria, visibility limits, and follow-up approval from the user or an approved project record. A link or record ID is preferable to copying private content.
+
+The skill supplies the creator and asset workflow. It does not include creator lists, member work, permission, showcase rights, ranking criteria, or approved outreach. Treat every example as fictional structure. When permission or attribution is missing, stop at an internal candidate list or permission request draft.
+
 ## Creator Loop
 
 ```text

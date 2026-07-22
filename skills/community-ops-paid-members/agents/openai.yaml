@@ -1,4 +1,4 @@
 interface:
   display_name: "Community Ops Paid Members"
   short_description: "Operate paid and high-value users"
-  default_prompt: "Use $community-ops-paid-members to design paid-member or high-value-user operations with benefits, risks, and follow-up."
+  default_prompt: "Use $community-ops-paid-members to design operations from the segment, confirmed benefits, evidence, and approval boundaries I provide."

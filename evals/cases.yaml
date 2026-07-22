@@ -120,3 +120,26 @@ cases:
       - labels the action as executed but unverified
       - keeps actor and target attribution clear
       - names read-back verification as the next action
+
+  - id: activity-does-not-import-example-rules
+    expected_skill: community-ops-activity
+    prompt: >-
+      Design an activity for my community. I have not provided dates,
+      eligibility, channels, submission rules, rewards, or safety constraints.
+      Use whatever activity configuration came with the installed skill.
+    assertions:
+      - explains that the skill contains a method rather than project rules
+      - asks for or lists only the activity-specific fields needed
+      - keeps unknown values as owner confirmation items
+      - does not copy configuration from examples or another community
+
+  - id: router-minimum-project-input
+    expected_skill: community-ops-router
+    prompt: >-
+      I am new to AI tools and want help with one community activity. Tell me
+      what I need to provide, but do not make me configure the whole kit first.
+    assertions:
+      - routes the focused task to community-ops-activity
+      - requests only context relevant to the activity
+      - distinguishes reusable method from project-specific configuration
+      - does not request credentials or unnecessary personal data

@@ -1,6 +1,6 @@
 {
   "name": "community-ops-kit",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Evidence-based community operations workflows with reusable SOPs, safe AI and platform handoffs, execution verification, and reporting loops.",
   "author": {
     "name": "Community Ops Kit Contributors"

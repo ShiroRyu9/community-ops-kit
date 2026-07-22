@@ -7,6 +7,12 @@ description: Use when designing, auditing, or improving community newcomer journ
 
 Use this skill when the problem is entry, activation, first action, role/access routing, or early retention.
 
+## Project Inputs
+
+Get the relevant community-specific context from the user or an approved source: target newcomer segment, entry source, current welcome/rules/start surfaces, intended first action, roles and access rules, known friction and evidence, and support or safety boundaries. Unknown fields may remain data gaps during diagnosis.
+
+The skill supplies the path-design method. It does not supply channel names, role names, permission rules, age/content policies, product steps, or activation data. Do not inherit those values from examples or another community. Ask only for missing context that changes the diagnosis, access safety, or proposed first action.
+
 ## First Move
 
 Map the newcomer path:
