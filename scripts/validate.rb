@@ -18,6 +18,9 @@ required = %w[
   .agents/plugins/marketplace.json
   agents/openai.yaml
   evals/cases.yaml
+  examples/sop-agent-handoff.md
+  skills/community-ops-router/references/sop-contract.md
+  skills/community-ops-automation-workflow/references/platform-agent-patterns.md
 ]
 
 required.each do |relative|
@@ -31,6 +34,8 @@ begin
   errors << "Unsupported plugin fields: #{unknown_plugin_fields.join(', ')}" unless unknown_plugin_fields.empty?
   errors << "Plugin name must be community-ops-kit" unless plugin["name"] == "community-ops-kit"
   errors << "Plugin version must use semantic versioning" unless plugin["version"].to_s.match?(/\A(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z.-]+)?\z/)
+  changelog_version = (ROOT + "CHANGELOG.md").read[/^## ([0-9]+\.[0-9]+\.[0-9]+) - /, 1]
+  errors << "Plugin version must match the latest changelog version" unless plugin["version"] == changelog_version
   errors << "Plugin description is missing" if plugin["description"].to_s.strip.empty?
   errors << "Plugin author name is missing" if plugin.dig("author", "name").to_s.strip.empty?
   errors << "Plugin skills path must be ./skills/" unless plugin["skills"] == "./skills/"

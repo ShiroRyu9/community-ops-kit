@@ -1,4 +1,4 @@
 interface:
   display_name: "Community Ops Kit"
-  short_description: "Run evidence-based community operations workflows"
-  default_prompt: "Use Community Ops Kit to diagnose this community need, route it to the right workflow, and produce an operator-ready result."
+  short_description: "Turn community evidence into verified workflows"
+  default_prompt: "Use Community Ops Kit to diagnose this community need, route it, create an operator-ready SOP, and keep execution approval and verification explicit."

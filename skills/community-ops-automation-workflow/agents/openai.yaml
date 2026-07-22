@@ -1,4 +1,4 @@
 interface:
   display_name: "Community Ops Automation"
-  short_description: "Design safe automation for community ops"
-  default_prompt: "Use $community-ops-automation-workflow to turn this repeated community operation into an owner-reviewed automation workflow."
+  short_description: "Design verified AI and platform handoffs"
+  default_prompt: "Use $community-ops-automation-workflow to turn this repeated community operation into an owner-reviewed workflow with explicit roles, states, verification, and writeback."

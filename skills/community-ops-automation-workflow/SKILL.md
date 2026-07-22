@@ -1,6 +1,6 @@
 ---
 name: community-ops-automation-workflow
-description: Use when designing, reviewing, or documenting community-operations automation, including recurring data collection, report assembly, activity reminders, draft generation, status-board updates, skill/version checks, tool handoffs, dry-runs, audit trails, and owner approval gates. Trigger on requests about "社区自动化", "自动化流程", "日报/周报自动化", "提醒自动化", "检查更新", "对比版本", "把重复动作交给工具", or safe AI-assisted community ops.
+description: Use when designing, reviewing, or documenting community-operations automation, including recurring data collection, report assembly, activity reminders, draft generation, status-board updates, skill/version checks, AI/bot/operator handoffs, execution states, post-action verification, dry-runs, audit trails, and owner approval gates. Trigger on requests about "社区自动化", "自动化流程", "日报/周报自动化", "提醒自动化", "Bot 工作流", "执行回读", "检查更新", "对比版本", "把重复动作交给工具", or safe AI-assisted community ops.
 ---
 
 # Community Ops Automation Workflow
@@ -10,10 +10,14 @@ description: Use when designing, reviewing, or documenting community-operations 
 Use this skill to turn repeated community-ops work into a safe automation workflow. The default model is:
 
 ```text
-repeated task -> input source -> automated collection/draft/check -> human approval gate -> output/log -> review/update
+repeated task -> durable input -> automated collection/draft/check
+-> human approval gate -> bounded execution -> read-back verification
+-> state writeback -> review/update
 ```
 
 Automation should reduce repeated labor and improve review quality. Keep public, financial, permission, reward, role, and official-claim actions under explicit human approval.
+
+Read [platform-agent-patterns.md](references/platform-agent-patterns.md) when the workflow spans an operator, AI skill, scheduler, bot, API, or platform integration.
 
 ## Workflow
 
@@ -36,8 +40,11 @@ Do not automate a vague goal such as "increase engagement." Turn it into a concr
 For each task, define:
 
 - **inputs**: channels, posts, files, reports, metrics, user-provided notes, or prior skill files;
+- **source of truth**: the durable record that owns the latest confirmed state;
 - **allowed automation**: read, collect, summarize, classify, draft, compare, prepare reminders, create non-destructive local archives, or produce a checklist;
 - **human gate**: what the owner must review before execution;
+- **execution roles**: what the operator, AI/skill, scheduler, and platform adapter each do;
+- **current state**: observed, prepared, pending approval, approved, executed, verified, recorded, blocked, ambiguous, cancelled, or data gap;
 - **output**: report, draft, checklist, version diff, action list, or archive note;
 - **evidence**: IDs, links, timestamps, counts, source files, or "data missing";
 - **success criteria**: what must be true for the workflow to be complete;
@@ -53,7 +60,27 @@ Use direct model/tool calls or human review when an intermediate result changes 
 
 Define one handoff between the two routes. Do not repeat completed calls or switch routes without a new reason.
 
-### 4. Decide What Can Run Automatically
+### 4. Define Roles And State Transitions
+
+Use these role boundaries:
+
+- **operator/owner**: decides scope, approves sensitive actions, and accepts exceptions;
+- **AI/skill**: interprets evidence, applies judgment, drafts, and validates semantic results;
+- **automation/scheduler**: triggers predictable reads, checks, calculations, and handoffs;
+- **platform adapter**: a bot, API, or integration that reads or writes only within its configured permissions;
+- **durable record**: stores the latest verified state and minimum necessary evidence;
+- **report**: summarizes the record for a decision and does not replace it.
+
+Track the action through:
+
+```text
+observed -> scoped -> prepared -> pending approval -> approved
+-> executed -> verified -> recorded -> reviewed
+```
+
+Use `blocked`, `data gap`, `ambiguous`, or `cancelled` when the normal path stops. An automation run, draft, approval, or unverified execution is not a completed public action.
+
+### 5. Decide What Can Run Automatically
 
 Safe default automation:
 
@@ -77,7 +104,7 @@ Require explicit approval before:
 - official metrics, revenue claims, or public commitments;
 - handling disputes or payment/access issues.
 
-### 5. Add Dry-Run And Review
+### 6. Add Dry-Run, Verification, And Review
 
 For workflows with any external effect, include:
 
@@ -86,23 +113,29 @@ For workflows with any external effect, include:
 - preview output;
 - owner confirmation point;
 - execution log;
+- read-back verification from the target system;
+- state writeback to the durable record;
 - rollback or correction note where applicable.
 
 If exact targets are missing, stop at a draft or checklist.
 
 Do not retry an action when the first attempt may already have caused an external effect and its status is ambiguous. Stop, preserve the evidence, and ask the owner to verify the target system.
 
-### 6. Produce The Automation Map
+### 7. Produce The Automation Map
 
 Use this format:
 
 ```text
 Workflow:
-Input:
+Input and source of truth:
+Roles and handoffs:
 Automated steps:
 Human approval gate:
+State transitions:
 Output:
-Evidence/log:
+Execution receipt:
+Read-back verification:
+Evidence/writeback:
 Success criteria:
 Stop/question condition:
 Retry limit:

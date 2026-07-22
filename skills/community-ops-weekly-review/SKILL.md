@@ -24,6 +24,9 @@ entry -> first action -> participation -> submission/proof -> feedback/showcase 
 - support, payment, access, safety, or moderation risks;
 - product/website/account conversion signals if available;
 - unverified metrics and data gaps.
+- daily operating records, execution receipts, verification results, and material state changes.
+
+Prefer durable operating records over report summaries when the two conflict. Daily reports and dashboards are derived views; they should not become the only evidence for a weekly conclusion.
 
 ## Output Pattern
 
@@ -36,8 +39,8 @@ entry -> first action -> participation -> submission/proof -> feedback/showcase 
 - Data sources and denominator: ...
 
 **关键动作**
-| Area | What happened | Evidence | Decision needed |
-|---|---|---|---|
+| Area | Prepared | Executed/verified | Evidence | Decision needed |
+|---|---|---|---|---|
 
 **用户路径复盘**
 entry -> first action -> participation -> proof -> feedback/showcase -> next action
@@ -61,5 +64,7 @@ Weekly review outputs are recommendations and drafts. Require explicit confirmat
 ## Quality Bar
 
 Do not turn the review into a generic strategy essay. Each conclusion needs evidence: count, link, artifact, visible action, user segment, or an explicit data gap.
+
+Keep `prepared`, `pending approval`, `executed`, `verified`, `blocked`, `ambiguous`, and `cancelled` distinct. An automation run or approved draft does not prove that a public action happened. Feed verified decisions and material state changes back into the durable operating record for the next cycle.
 
 Avoid unsupported revenue or retention claims. Say "possible signal" when the evidence is partial.

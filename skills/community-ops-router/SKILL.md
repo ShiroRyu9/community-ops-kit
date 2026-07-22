@@ -1,6 +1,6 @@
 ---
 name: community-ops-router
-description: Use when diagnosing, designing, coordinating, or reviewing an end-to-end community operations system; when a request spans onboarding, activities, creators, paid members, reports, automation, support risk, or operator writing; or when the correct specialist community-ops skill is unclear. Produces a routed workflow with user segment, friction, next action, surface, evidence, feedback loop, review rhythm, and approval boundaries.
+description: Use when diagnosing, designing, coordinating, operationalizing, or reviewing an end-to-end community operations system; when a request spans onboarding, activities, creators, paid members, reports, automation, support risk, operator writing, SOPs, or AI/bot/operator handoffs; or when the correct specialist community-ops skill is unclear. Produces a routed workflow with user segment, friction, next action, surface, evidence, execution status, feedback loop, review rhythm, and approval boundaries.
 ---
 
 # Community Ops Router
@@ -31,9 +31,12 @@ Classify the request:
 1. **Diagnose**: find the main break in the community lifecycle.
 2. **Design**: build an operating loop, user path, or coordinated plan.
 3. **Route**: send a concrete task to the smallest specialist skill.
-4. **Review**: combine evidence, risks, decisions, and next actions across skills.
+4. **Operationalize**: turn a decision into a reusable SOP with ownership, handoffs, status, verification, and writeback.
+5. **Review**: combine evidence, risks, decisions, and next actions across skills.
 
 For multi-step work, define a lean task contract: goal, relevant context, hard constraints, required evidence, success criteria, output format, approval boundary, and stop/question conditions. See [task-contract.md](references/task-contract.md).
+
+When another operator, AI agent, bot, scheduler, or integration will carry out the action, use [sop-contract.md](references/sop-contract.md). The task contract defines the assignment; the SOP contract defines repeatable execution and proof.
 
 ## Skill Routing
 
@@ -91,7 +94,27 @@ trigger -> input -> operator judgment -> output -> evidence -> review rule
 
 Keep confirmed actions, drafts, assumptions, and missing data separate.
 
-### 4. Close The Loop
+### 4. Operationalize The Handoff
+
+For repeated or delegated work, define:
+
+- trigger and decision owner;
+- required inputs and durable evidence source;
+- operator, AI, automation, and platform-adapter roles;
+- current state and allowed state transitions;
+- approval scope and stop conditions;
+- execution receipt, verification, and writeback destination.
+
+Use these normal states:
+
+```text
+observed -> scoped -> prepared -> pending approval -> approved
+-> executed -> verified -> recorded -> reviewed
+```
+
+Use `blocked`, `data gap`, `ambiguous`, or `cancelled` when the normal path stops. Never report `prepared`, `approved`, or `executed but unverified` as completed.
+
+### 5. Close The Loop
 
 Every plan should specify:
 

@@ -85,3 +85,38 @@ cases:
       - turns the notes into an explicit task contract
       - proposes a small reviewable action
       - marks sensitive external actions for confirmation
+
+  - id: operationalize-recurring-action
+    expected_skill: community-ops-router
+    prompt: >-
+      Turn this repeated activity reminder process into an SOP that another
+      operator, AI agent, and platform integration can execute consistently.
+      Include ownership, approval, verification, and writeback.
+    assertions:
+      - produces a reusable SOP contract rather than only general advice
+      - separates operator, AI, automation, and platform-adapter roles
+      - defines normal and exception states
+      - requires read-back verification before completion
+
+  - id: handle-ambiguous-execution
+    expected_skill: community-ops-automation-workflow
+    prompt: >-
+      The integration timed out while publishing an approved reminder. We do
+      not know whether the reminder is already visible. Decide what the
+      automation should do next.
+    assertions:
+      - marks the external result as ambiguous
+      - does not retry before checking the target
+      - preserves a non-sensitive execution receipt
+      - verifies and writes back the final state
+
+  - id: report-executed-unverified
+    expected_skill: community-ops-daily-report
+    prompt: >-
+      Draft today's report. A reminder draft was approved and an execution
+      attempt returned success, but nobody has read the target surface yet.
+    assertions:
+      - does not report the reminder as completed
+      - labels the action as executed but unverified
+      - keeps actor and target attribution clear
+      - names read-back verification as the next action

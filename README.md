@@ -2,16 +2,32 @@
 
 [简体中文](README.zh-CN.md)
 
-Community Ops Kit is an open set of Agent Skills for running evidence-based community operations. It turns broad goals such as "improve engagement" into user segments, concrete actions, operating surfaces, evidence, feedback loops, review decisions, and approval boundaries.
+Community Ops Kit turns messy community notes into evidence-based, verifiable operating workflows for AI agents and human operators. It finds the main friction, routes work to specialist skills, produces reusable SOPs, keeps sensitive execution owner-reviewed, and feeds verified results into daily and weekly decisions.
 
 It works with Codex and other tools that support the open Agent Skills format.
+
+Built for community operators, community managers, creator or customer communities, and teams adding AI without giving it unchecked permissions.
+
+## What You Get In One Run
+
+```text
+messy notes and records
+-> confirmed facts, assumptions, data gaps, and approvals
+-> one main operating friction and prioritized action
+-> specialist output and reusable SOP
+-> operator / AI / automation / platform handoff
+-> approval, execution, read-back verification, and writeback
+-> daily or weekly decision
+```
+
+The kit keeps `prepared`, `approved`, `executed`, and `verified` separate, so an automation run is never mistaken for a completed community action.
 
 ## Start Without Choosing A Skill
 
 Give your existing notes to the router. You do not need to clean the input or remember all ten skill names:
 
 ```text
-Use community-ops-router to read the community records below. Separate confirmed facts, assumptions, data gaps, and approval items. Find the main operating friction, call the specialist skills that are needed, and give me the smallest action we can run this week with a review rule.
+Use community-ops-router to read the community records below. Separate confirmed facts, assumptions, data gaps, and approval items. Find the main operating friction, call only the specialist skills that are needed, and turn the next action into an SOP with ownership, execution roles, approval scope, verification, and a review rule.
 
 [Paste chat summaries, activity records, member feedback, metrics, or work notes]
 ```
@@ -25,7 +41,8 @@ See the complete path from messy notes to operating decisions in the [end-to-end
 3. **Choose the smallest useful change**: prefer an action that can run and produce evidence this week.
 4. **Give each surface one clear job**: entry points guide, activity surfaces collect participation, and reports support decisions.
 5. **Automate within a boundary**: collection, organization, reminder preparation, and checks may run automatically; sending reminders and other external actions stay human-confirmed.
-6. **Make every action reviewable**: define the evidence, review time, owner, and next decision before execution.
+6. **Verify external results**: distinguish preparation, approval, execution attempts, verified outcomes, and blocked or ambiguous states.
+7. **Make every action reviewable**: write material results back to the operating record and define the next decision.
 
 See [Operating Principles](skills/community-ops-router/references/operating-principles.md) for the full decision questions, anti-patterns, and output check.
 
@@ -33,14 +50,14 @@ See [Operating Principles](skills/community-ops-router/references/operating-prin
 
 | Skill | Use it for |
 |---|---|
-| `community-ops-router` | Diagnose cross-functional problems and route the work |
+| `community-ops-router` | Diagnose, route, and operationalize work as reusable SOPs |
 | `community-ops-onboarding` | Newcomer paths, first actions, activation, and routing |
 | `community-ops-activity` | Campaigns, challenges, submissions, voting, rewards, and results |
 | `community-ops-creator-assets` | Creators, UGC, showcases, attribution, and reusable content |
 | `community-ops-paid-members` | Paid, premium, VIP, and high-value member operations |
 | `community-ops-daily-report` | Daily operating logs and owner updates |
 | `community-ops-weekly-review` | Weekly evidence, decisions, gaps, and priorities |
-| `community-ops-automation-workflow` | Safe recurring workflows with human approval gates |
+| `community-ops-automation-workflow` | Safe AI/bot/operator handoffs with execution verification |
 | `community-ops-support-risk` | Support, moderation, privacy, payment, access, and permission risk |
 | `community-ops-expression` | Natural announcements, reports, articles, and stakeholder writing |
 
@@ -50,8 +67,11 @@ See [Operating Principles](skills/community-ops-router/references/operating-prin
 community signal
 -> operator judgment
 -> specialist skill
+-> reusable SOP and exact handoff
 -> draft or safe automation
 -> human approval where required
+-> bounded execution
+-> read-back verification and state writeback
 -> daily record
 -> weekly review
 -> workflow update
@@ -103,7 +123,13 @@ Use community-ops-activity to design a seven-day creator challenge with a clear 
 Use community-ops-weekly-review to turn these notes and metrics into confirmed actions, signals, risks, decisions, and next-week priorities.
 ```
 
-See [examples](examples/) for worked scenarios. The [end-to-end operating loop](examples/end-to-end-operating-loop.md) shows how the router coordinates several skills during one operating cycle.
+Turn a repeated operation into a safe handoff:
+
+```text
+Use community-ops-automation-workflow to turn this reminder process into an owner-reviewed workflow. Define operator, AI, scheduler, and platform-adapter roles; track preparation through verification; and stop on ambiguous external results.
+```
+
+See [examples](examples/) for worked scenarios. The [end-to-end operating loop](examples/end-to-end-operating-loop.md) shows how the router coordinates several skills. The [SOP and agent handoff](examples/sop-agent-handoff.md) shows how a recurring action moves from evidence to verified completion.
 
 ## Safety Model
 

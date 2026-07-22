@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0 - 2026-07-22
+
+- Added a reusable community operations SOP contract for triggers, ownership, evidence, execution roles, approval scope, verification, exceptions, and review.
+- Added platform-agent patterns for operator, AI, scheduler, bot/API integration, durable-record, and report handoffs.
+- Added explicit execution states from observation and preparation through approval, execution, verification, recording, and review.
+- Separated content review from execution approval and bounded standing approvals to their documented scope.
+- Updated daily and weekly reporting to keep prepared, executed, verified, blocked, ambiguous, and cancelled work distinct.
+- Added a worked SOP/agent handoff example and clean-context eval cases for repeated actions, ambiguous external results, and unverified execution.
+
 ## 0.2.0 - 2026-07-21
 
 - Added a single-entry prompt for operators who do not know which skill to choose.

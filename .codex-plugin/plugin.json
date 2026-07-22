@@ -1,7 +1,7 @@
 {
   "name": "community-ops-kit",
-  "version": "0.2.0",
-  "description": "Evidence-based community operations workflows for onboarding, activities, creators, paid members, reporting, automation, risk, and operator writing.",
+  "version": "0.3.0",
+  "description": "Evidence-based community operations workflows with reusable SOPs, safe AI and platform handoffs, execution verification, and reporting loops.",
   "author": {
     "name": "Community Ops Kit Contributors"
   },
@@ -21,15 +21,15 @@
   "interface": {
     "displayName": "Community Ops Kit",
     "shortDescription": "Reusable workflows for evidence-based community operations",
-    "longDescription": "Plan and review community operations across onboarding, activities, creators, paid members, daily and weekly reporting, automation, support risk, and operator communication.",
+    "longDescription": "Turn community evidence into routed actions, reusable SOPs, owner-reviewed AI and platform handoffs, verified execution records, and daily or weekly decisions.",
     "developerName": "Community Ops Kit Contributors",
     "category": "Productivity",
     "capabilities": ["Read", "Write"],
     "websiteURL": "https://github.com/ShiroRyu9/community-ops-kit",
     "defaultPrompt": [
-      "Diagnose the main friction in my community lifecycle and give me the next operating actions.",
-      "Turn these community notes into a weekly review with evidence, risks, and priorities.",
-      "Design a community activity with a clear participation loop and review metrics."
+      "Turn these community notes into a routed operating workflow with evidence, roles, approval gates, and verification.",
+      "Convert this repeated community task into an SOP another operator or agent can execute safely.",
+      "Review this activity from preparation through verified execution and decide the next action."
     ]
   }
 }

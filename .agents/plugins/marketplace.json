@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "community-ops-kit",
-      "description": "Evidence-based workflows for running and reviewing online communities.",
+      "description": "Evidence-based community SOPs with safe AI handoffs and verified execution.",
       "source": {
         "source": "local",
         "path": "./"

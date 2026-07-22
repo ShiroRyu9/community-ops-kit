@@ -11,7 +11,10 @@ Use this skill to turn one day's community work into a report. The report should
 
 Separate work into states:
 
-- completed public action;
+- prepared or pending approval;
+- approved but not executed;
+- executed but not yet verified;
+- verified and recorded action;
 - draft prepared for review;
 - data checked or analyzed;
 - user/member/creator follow-up;
@@ -19,7 +22,9 @@ Separate work into states:
 - blocked or owner-confirmation needed;
 - tomorrow action.
 
-Do not write drafts, dry-runs, or analysis as completed public work.
+Do not write drafts, dry-runs, approvals, automation runs, or unverified execution attempts as completed public work.
+
+Use the durable operating record and execution receipt as the factual inputs when available. Treat the daily report as a derived summary; it does not replace or silently correct the source record.
 
 ## Output Pattern
 
@@ -28,10 +33,10 @@ Do not write drafts, dry-runs, or analysis as completed public work.
 [1-2 sentences on the actual operating focus.]
 
 **已完成**
-- [Action + surface + evidence/status.]
+- [Verified action + actor + surface + evidence/status.]
 
 **跟进中**
-- [Person/group/topic + next step + owner.]
+- [Prepared, pending approval, executed-unverified, or follow-up item + next step + owner.]
 
 **数据/观察**
 - [Concrete signal, count, link, or declared data gap.]
@@ -53,6 +58,8 @@ Before finalizing:
 
 - Does each bullet describe an actual action or observation?
 - Are drafts separated from published work?
+- Is every completed external action verified, with actor and target clear?
+- Are prepared, approved, executed, verified, blocked, ambiguous, and cancelled states kept distinct?
 - Are missing IDs, links, counts, or exact users marked as data gaps?
 - Are public posts, DMs, mentions, rewards, discounts, winner lists, roles, permissions, channel changes, integrations, and official claims owner-confirmed?
 - Are private messages, payment details, access data, and unnecessary user identifiers kept out of broadly shared reports?
