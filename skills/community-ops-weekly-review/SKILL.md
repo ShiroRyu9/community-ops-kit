@@ -36,28 +36,30 @@ Prefer durable operating records over report summaries when the two conflict. Da
 
 ## Output Pattern
 
+Localize the visible labels to the user's requested language.
+
 ```md
-**本周判断**
+**Weekly Judgment**
 [What improved, broke, or needs a decision.]
 
-**复盘范围**
+**Review Scope**
 - Period/timezone: ...
 - Data sources and denominator: ...
 
-**关键动作**
+**Key Actions**
 | Area | Prepared | Executed/verified | Evidence | Decision needed |
 |---|---|---|---|---|
 
-**用户路径复盘**
+**User-Path Review**
 entry -> first action -> participation -> proof -> feedback/showcase -> next action
 
-**机会**
+**Opportunities**
 - [Concrete improvement with surface and owner.]
 
-**风险/缺口**
+**Risks / Gaps**
 - [Missing data, approval, support issue, rule gap, or unclear benefit.]
 
-**下周优先级**
+**Next-Week Priorities**
 1. [P0 + owner + due date]
 2. [P1 + owner + due date]
 3. [P2 + owner + due date]

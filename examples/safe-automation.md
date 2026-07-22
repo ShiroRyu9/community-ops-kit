@@ -1,5 +1,7 @@
 # Example: Safe Report Automation
 
+[Simplified Chinese](safe-automation.zh-CN.md)
+
 ## Prompt
 
 ```text

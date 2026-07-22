@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Added matching English and Simplified Chinese versions for every worked example, plus bilingual example indexes and language-specific README links.
+- Removed accidental mixed-language text from English documentation and skill templates, and added validation for English-language purity and example-pair completeness.
+
 ## 0.3.1 - 2026-07-22
 
 - Clarified that the kit includes reusable methods and safety boundaries, while community rules, channels, roles, rewards, benefits, records, and tool configuration must come from the user or an approved project source.

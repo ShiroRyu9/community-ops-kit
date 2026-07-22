@@ -18,9 +18,12 @@ required = %w[
   .agents/plugins/marketplace.json
   agents/openai.yaml
   evals/cases.yaml
+  examples/README.md
+  examples/README.zh-CN.md
   examples/project-context-template.md
   examples/project-context-template.zh-CN.md
   examples/sop-agent-handoff.md
+  skills/community-ops-router/references/operating-principles.zh-CN.md
   skills/community-ops-router/references/sop-contract.md
   skills/community-ops-automation-workflow/references/platform-agent-patterns.md
 ]
@@ -116,6 +119,70 @@ markdown_files.each do |file_name|
     errors << "Broken link in #{file.relative_path_from(ROOT)}: #{target}" unless resolved.exist?
   end
 end
+
+english_markdown_files = markdown_files.reject { |file_name| file_name.end_with?(".zh-CN.md") }
+english_markdown_files.each do |file_name|
+  file = Pathname.new(file_name)
+  errors << "Found Chinese text in English Markdown: #{file.relative_path_from(ROOT)}" if file.read.match?(/\p{Han}/)
+end
+
+english_examples = Dir.glob((ROOT + "examples/*.md").to_s).reject { |file_name| file_name.end_with?(".zh-CN.md") }
+chinese_examples = Dir.glob((ROOT + "examples/*.zh-CN.md").to_s)
+protected_example_literals = %w[
+  observed prepared approved executed verified recorded reviewed blocked ambiguous cancelled
+] + ["data gap", "pending approval"]
+
+english_examples.each do |file_name|
+  file = Pathname.new(file_name)
+  counterpart = Pathname.new(file_name.sub(/\.md\z/, ".zh-CN.md"))
+  errors << "Missing Chinese example: #{counterpart.relative_path_from(ROOT)}" unless counterpart.file?
+  next unless counterpart.file?
+
+  english_text = file.read
+  chinese_text = counterpart.read
+  english_links = english_text.scan(/\[[^\]]+\]\(([^)]+)\)/).flatten.map { |target| target.split("#", 2).first }
+  errors << "English example does not link to Chinese version: #{file.relative_path_from(ROOT)}" unless english_links.include?(counterpart.basename.to_s)
+
+  english_lines = english_text.lines.count { |line| !line.strip.empty? }
+  chinese_lines = chinese_text.lines.count { |line| !line.strip.empty? }
+  line_ratio = [english_lines, chinese_lines].min.fdiv([english_lines, chinese_lines].max)
+  errors << "Example translation appears incomplete: #{counterpart.relative_path_from(ROOT)}" if line_ratio < 0.7
+
+  english_headings = english_text.scan(/^(#+) /).flatten.map(&:length)
+  chinese_headings = chinese_text.scan(/^(#+) /).flatten.map(&:length)
+  errors << "Example heading structure differs: #{file.relative_path_from(ROOT)}" unless english_headings == chinese_headings
+  errors << "Example code-block structure differs: #{file.relative_path_from(ROOT)}" unless english_text.scan(/^```/).length == chinese_text.scan(/^```/).length
+
+  english_numbers = english_text.scan(/\b\d+(?:\.\d+)?\b/).uniq.sort
+  chinese_numbers = chinese_text.scan(/\b\d+(?:\.\d+)?\b/).uniq.sort
+  errors << "Example numeric facts differ: #{file.relative_path_from(ROOT)}" unless english_numbers == chinese_numbers
+
+  english_code_literals = english_text.scan(/`([^`]+)`/).flatten
+  protected_in_source = english_code_literals.select do |literal|
+    literal.start_with?("community-ops-") || protected_example_literals.include?(literal)
+  end
+  missing_literals = protected_in_source.uniq.reject { |literal| chinese_text.include?("`#{literal}`") }
+  errors << "Chinese example is missing protected literals #{missing_literals.join(', ')}: #{counterpart.relative_path_from(ROOT)}" unless missing_literals.empty?
+end
+
+chinese_examples.each do |file_name|
+  file = Pathname.new(file_name)
+  counterpart = Pathname.new(file_name.sub(/\.zh-CN\.md\z/, ".md"))
+  errors << "Missing English example: #{counterpart.relative_path_from(ROOT)}" unless counterpart.file?
+  next unless counterpart.file?
+
+  chinese_links = file.read.scan(/\[[^\]]+\]\(([^)]+)\)/).flatten.map { |target| target.split("#", 2).first }
+  errors << "Chinese example does not link to English version: #{file.relative_path_from(ROOT)}" unless chinese_links.include?(counterpart.basename.to_s)
+end
+
+readme_texts = [ROOT + "README.md", ROOT + "README.zh-CN.md"].map(&:read)
+readme_heading_levels = readme_texts.map { |text| text.scan(/^([#]{2,3}) /).flatten.map(&:length) }
+errors << "README English and Chinese section structures differ" unless readme_heading_levels[0] == readme_heading_levels[1]
+
+readme_content_lines = readme_texts.map { |text| text.lines.count { |line| !line.strip.empty? } }
+readme_line_ratio = readme_content_lines.min.fdiv(readme_content_lines.max)
+errors << "README translation appears incomplete" if readme_line_ratio < 0.7
+errors << "README English and Chinese code-block structures differ" unless readme_texts[0].scan(/^```/).length == readme_texts[1].scan(/^```/).length
 
 begin
   evals = YAML.safe_load((ROOT + "evals/cases.yaml").read)

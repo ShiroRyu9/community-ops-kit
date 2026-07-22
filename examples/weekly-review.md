@@ -1,5 +1,7 @@
 # Example: Weekly Review
 
+[Simplified Chinese](weekly-review.zh-CN.md)
+
 ## Prompt
 
 ```text

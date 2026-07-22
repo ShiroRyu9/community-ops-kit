@@ -1,5 +1,7 @@
 # Example: End-to-End Community Operating Loop
 
+[Simplified Chinese](end-to-end-operating-loop.zh-CN.md)
+
 This worked example uses synthetic, aggregate records. Every number below comes from the sample input. Missing facts stay marked as data gaps.
 
 ## 1. Beginner Prompt

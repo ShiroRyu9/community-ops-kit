@@ -1,5 +1,7 @@
 # Example: SOP And Agent Handoff
 
+[Simplified Chinese](sop-agent-handoff.zh-CN.md)
+
 This example uses synthetic aggregate records. It shows how one recurring community action moves from evidence to verified completion without assuming that an automation run equals a published result.
 
 ## Scenario

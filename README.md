@@ -1,6 +1,6 @@
 # Community Ops Kit
 
-[简体中文](README.zh-CN.md)
+[Simplified Chinese](README.zh-CN.md)
 
 Community Ops Kit turns messy community notes into evidence-based, verifiable operating workflows for AI agents and human operators. It finds the main friction, routes work to specialist skills, produces reusable SOPs, keeps sensitive execution owner-reviewed, and feeds verified results into daily and weekly decisions.
 
@@ -123,7 +123,7 @@ Add this repository as a plugin marketplace:
 codex plugin marketplace add ShiroRyu9/community-ops-kit
 ```
 
-Then open Codex, run `/plugins`, select **Community Ops Kit**, install it, and start a new session.
+Then open Codex, run `/plugins`, select **Community Ops Kit**, install it, and start a new task.
 
 ### Manual Install
 
@@ -163,7 +163,7 @@ Turn a repeated operation into a safe handoff:
 Use community-ops-automation-workflow to turn this reminder process into an owner-reviewed workflow. Define operator, AI, scheduler, and platform-adapter roles; track preparation through verification; and stop on ambiguous external results.
 ```
 
-See [examples](examples/) for worked scenarios. The [end-to-end operating loop](examples/end-to-end-operating-loop.md) shows how the router coordinates several skills. The [SOP and agent handoff](examples/sop-agent-handoff.md) shows how a recurring action moves from evidence to verified completion.
+See the [English example index](examples/README.md) for all worked scenarios. Every example also links to a Simplified Chinese version. The [end-to-end operating loop](examples/end-to-end-operating-loop.md) shows how the router coordinates several skills. The [SOP and agent handoff](examples/sop-agent-handoff.md) shows how a recurring action moves from evidence to verified completion.
 
 ## FAQ
 

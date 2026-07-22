@@ -1,5 +1,7 @@
 # Example: Creator Challenge
 
+[Simplified Chinese](activity-challenge.zh-CN.md)
+
 This example demonstrates structure. Its surfaces, constraints, and activity details are not defaults for another community.
 
 ## Prompt
@@ -30,5 +32,5 @@ The result should include:
 - only says "increase engagement";
 - invents a reward or deadline;
 - treats a draft as published;
-- reuses creator work without permission.
+- reuses creator work without permission;
 - fills missing dates, rewards, rules, or channels from repository examples.

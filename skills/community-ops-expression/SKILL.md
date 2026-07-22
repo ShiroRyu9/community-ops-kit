@@ -1,6 +1,6 @@
 ---
 name: community-ops-expression
-description: Use when writing, rewriting, reviewing, or polishing community-operations language, including announcements, activity posts, reminders, result posts, daily/weekly reports, public articles, skill descriptions, resume bullets, interview stories, stakeholder updates, and "说人话" edits. Trigger when the user asks for natural, less AI-like, less templated, more practical community-ops writing or points out repeated sentence patterns such as "不是...而是..." and "不只是...更是...".
+description: Use when writing, rewriting, reviewing, or polishing community-operations language, including announcements, activity posts, reminders, result posts, daily/weekly reports, public articles, skill descriptions, resume bullets, interview stories, stakeholder updates, and natural-language edits. Trigger when the user asks for writing that sounds human, concrete, less templated, less AI-like, or free of repetitive contrast patterns.
 ---
 
 # Community Ops Expression
@@ -44,7 +44,7 @@ Name the surface, action, and next step:
 - what proof or response is needed;
 - what happens next.
 
-Avoid empty phrases such as "提升互动", "打造生态", or "增强粘性" unless paired with a concrete mechanism and measurement.
+Avoid empty phrases such as "boost engagement", "build an ecosystem", or "increase stickiness" unless paired with a concrete mechanism and measurement.
 
 ### Keep Operator Voice
 
@@ -69,7 +69,7 @@ For short outputs, preserve the conclusion, supporting evidence, material caveat
 
 Remove or limit:
 
-- repeated binary contrasts such as `不是 X，而是 Y` and `不只是 X，更是 Y`;
+- repeated binary contrasts such as `not X, but Y` and `not only X, but also Y`;
 - long abstract openings;
 - inflated adjectives;
 - three-part slogans;

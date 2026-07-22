@@ -1,5 +1,7 @@
 # Example: Newcomer Activation
 
+[Simplified Chinese](newcomer-activation.zh-CN.md)
+
 ## Prompt
 
 ```text

@@ -34,23 +34,25 @@ Use the durable operating record and execution receipt as the factual inputs whe
 
 ## Output Pattern
 
+Localize the visible labels to the user's requested language.
+
 ```md
-**今日重点**
+**Daily Focus**
 [1-2 sentences on the actual operating focus.]
 
-**已完成**
+**Completed**
 - [Verified action + actor + surface + evidence/status.]
 
-**跟进中**
+**In Progress**
 - [Prepared, pending approval, executed-unverified, or follow-up item + next step + owner.]
 
-**数据/观察**
+**Data / Observations**
 - [Concrete signal, count, link, or declared data gap.]
 
-**风险/待确认**
+**Risks / Confirmation Needed**
 - [Reward, role, send, payment, permission, support, safety, or missing evidence.]
 
-**明日动作**
+**Next-Day Actions**
 - [Concrete next action.]
 ```
 

@@ -1,5 +1,7 @@
 # Operating Principles
 
+[Simplified Chinese](operating-principles.zh-CN.md)
+
 Use this reference when a diagnosis or plan needs sharper judgment than the router workflow alone provides.
 Apply the rules in order; do not skip evidence classification to reach an action faster.
 

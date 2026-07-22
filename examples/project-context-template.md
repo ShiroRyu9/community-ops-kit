@@ -1,5 +1,7 @@
 # Community Project Context Template
 
+[Simplified Chinese](project-context-template.zh-CN.md)
+
 Fill only the sections relevant to the current task. A blank field means unknown; the skill should preserve it as a data gap or decision instead of turning it into a fact.
 
 Do not include passwords, tokens, webhook URLs, full private messages, payment details, or unnecessary personal data. Reference sensitive evidence with a controlled file path, record ID, or redacted summary.

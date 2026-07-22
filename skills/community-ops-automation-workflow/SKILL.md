@@ -1,6 +1,6 @@
 ---
 name: community-ops-automation-workflow
-description: Use when designing, reviewing, or documenting community-operations automation, including recurring data collection, report assembly, activity reminders, draft generation, status-board updates, skill/version checks, AI/bot/operator handoffs, execution states, post-action verification, dry-runs, audit trails, and owner approval gates. Trigger on requests about "社区自动化", "自动化流程", "日报/周报自动化", "提醒自动化", "Bot 工作流", "执行回读", "检查更新", "对比版本", "把重复动作交给工具", or safe AI-assisted community ops.
+description: Use when designing, reviewing, or documenting community-operations automation, including recurring data collection, report assembly, activity reminders, draft generation, status-board updates, skill/version checks, AI/bot/operator handoffs, execution states, post-action verification, dry-runs, audit trails, owner approval gates, and safe delegation of repeated work to tools.
 ---
 
 # Community Ops Automation Workflow
